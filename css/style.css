@@ -81,7 +81,7 @@ body {
     color: var(--primary);
 }
 
-.navbar .navbar-extra #hamburger {
+#hamburger-menu {
     display: none;
 }
 
@@ -338,7 +338,7 @@ footer .credit a {
         font-size: 62.5%;
     }
 
-    .navbar .navbar-extra #hamburger {
+    #hamburger-menu {
         display: inline-block;
     }
 
@@ -346,7 +346,7 @@ footer .credit a {
         position: absolute;
         top: 100%;
         right: -100%;
-        background-color: aliceblue;
+        background-color: rgb(255, 255, 255);
         width: 30rem;
         height: 100vh;
         transition: 0.3s;
