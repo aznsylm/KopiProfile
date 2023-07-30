@@ -85,6 +85,97 @@ body {
     display: none;
 }
 
+/* Navbar search form */
+.navbar .search-form {
+    position: absolute;
+    top: 100%;
+    right: 7%;
+    background-color: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+}
+
+.navbar .search-form.active {
+    transform: scaleY(1);
+
+}
+
+.navbar .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--bg);
+    padding: 1rem;
+}
+
+.navbar .search-form label {
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--bg);
+}
+
+/* Navbar Shopping Cart */
+.shopping-cart {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 35rem;
+    height: 100vh;
+    padding: 0 1.5rem;
+    color: var(--bg);
+    background-color: #fff;
+    transition: 0.3s linear;
+} 
+
+.shopping-cart .cart-item {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #666;
+    position: relative;
+}
+
+.shopping-cart .cart-item img {
+    height: 6rem;
+    border-radius: 70%;
+}
+
+
+.shopping-cart .cart-item  .item-detail h3 {
+    font-size: 1.6rem;
+    padding-bottom: 0.5rem;
+}
+
+.shopping-cart .cart-item  .item-detail .item-price {
+    font-size: 1.2rem;
+
+}
+
+.shopping-cart .cart-item .remove-item {
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.shopping-cart .cart-item .remove-item:hover {
+    color: var(--primary);
+
+}
+
+.navbar .shopping-cart.active {
+    right: 0;
+}
+
+
+
 /* Navbar End */
 
 /* Hero Section Start */
@@ -148,17 +239,17 @@ body {
 /* Hero Section End*/
 
 /* About Section Start */
-.about, .menu, .contact {
+.about, .menu, .contact, .products {
     padding: 8rem 7% 1.4rem;
 }
 
-.about h2, .menu h2, .contact h2 {
+.about h2, .menu h2, .contact h2, .products h2 {
     text-align: center;
     font-size: 2.6rem;
     margin-bottom: 3rem;
 }
 
-.about h2 span, .menu h2 span, .contact h2 span {
+.about h2 span, .menu h2 span, .contact h2 span, .products h2 span {
     color: var(--primary);
 }
 
@@ -195,11 +286,11 @@ body {
 /* About Section End */
 
 /* Menu Section Start */
-.menu h2, .contact h2 {
+.menu h2, .contact h2, .products h2 {
     margin-bottom: 1rem;
 }
 
-.menu p, .contact p {
+.menu p, .contact p, .products p {
     text-align: center;
     max-width: 30rem;
     margin: auto;
@@ -230,6 +321,79 @@ body {
 }
 
 /* Menu Section End */
+
+/* Product Section Start */
+
+.products .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+
+.products .product-card {
+    text-align: center;
+    border: 1px solid var(--primary);
+    padding: 2rem;
+}
+
+.products .product-icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.products .product-icons a {
+    width: 4rem;
+    height: 4rem;
+    color: #fff;
+    margin: 0.3rem;
+    border: 1px solid #666;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products .product-icons a:hover {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.products .product-image {
+    padding: 1rem;
+}
+
+.products .product-image img {
+    height: 25rem;
+}
+
+.products .product-content h3 {
+    font-size: 2rem;
+}
+
+.products .product-content .product-stars {
+    font-size: 1.7rem;
+    padding: 0.5rem;
+    color: var(--primary);
+}
+
+.products .product-content .product-stars .star-full {
+    fill: var(--primary) ;
+}
+
+.products .product-card .product-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.products .product-card .product-price span {
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1rem;
+}
+
+/* Product Section End */
 
 /* Contact Section Start */
 
@@ -370,6 +534,11 @@ footer .credit a {
 
     .navbar .navbar-nav a:hover::after {
         transform: scaleX(0.3);
+    }
+
+    .navbar .search-form {
+        width: 90%;
+        right: 2rem;
     }
 
     .about .row {
