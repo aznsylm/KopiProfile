@@ -131,7 +131,7 @@ body {
     color: var(--bg);
     background-color: #fff;
     transition: 0.3s linear;
-} 
+}
 
 .shopping-cart .cart-item {
     margin: 2rem 0;
@@ -149,12 +149,12 @@ body {
 }
 
 
-.shopping-cart .cart-item  .item-detail h3 {
+.shopping-cart .cart-item .item-detail h3 {
     font-size: 1.6rem;
     padding-bottom: 0.5rem;
 }
 
-.shopping-cart .cart-item  .item-detail .item-price {
+.shopping-cart .cart-item .item-detail .item-price {
     font-size: 1.2rem;
 
 }
@@ -379,7 +379,7 @@ body {
 }
 
 .products .product-content .product-stars .star-full {
-    fill: var(--primary) ;
+    fill: var(--primary);
 }
 
 .products .product-card .product-price {
@@ -487,6 +487,79 @@ footer .credit a {
 
 /* Footer Section End */
 
+/* Modal Box Detail Start*/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal .modal-container {
+    position: relative;
+    background-color: #fefefe;
+    color: var(--bg);
+    margin: 15% auto;
+    padding: 1.2rem;
+    border: 1px solid #666;
+    width: 80%;
+    animation: animateModal 0.5s;
+}
+
+/* Modal Animation */
+@keyframes animateModal {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+
+}
+
+.modal .modal-container .close-icon {
+    position: absolute;
+    right: 1rem;
+}
+
+.modal .modal-container .modal-content {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.modal .modal-container .modal-content img {
+    height: 18rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+.modal .modal-container .modal-content .product-content p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-top: 1.2rem;
+}
+
+.modal-content .product-content a {
+    display: flex;
+    gap: 1rem;
+    width: 12rem;
+    background-color: var(--primary);
+    color: #fff;
+    margin-top: 1rem;
+    padding: 1rem 1.6rem;
+}
+
+/* Modal Box Detail End*/
+
 /* Media Queries */
 
 /* Laptop */
@@ -579,6 +652,16 @@ footer .credit a {
     .contact .row form {
         padding-top: 0;
     }
+
+    .modal .modal-container .modal-content {
+        flex-wrap: wrap;
+    }
+    
+    /* .modal .modal-container .modal-content img {
+        display: flex;
+        justify-content: center;
+        width: auto;
+    } */
 }
 
 /* Mobile Phone */
